@@ -1,0 +1,138 @@
+/* ---------- Color Palette ---------- */
+
+/*
+
+Pink - #ec5084;
+Green - #6ea24a;
+Grey - #b7b7b7;
+
+*/
+
+/* ---------- Reset ---------- */
+a img {
+    border: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    line-height: 1em;
+    font-size: 100%;
+    font-weight: normal;
+}
+
+p {
+    margin: 0 0 1em 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- Styles ---------- */
+
+/*Why is there a scrollbar on the bottom of my screen? My screen is 1349px wide and my content is 1349px wide. */
+
+.outline {
+    display: none;  /* Hide headings that are intended to convey structure in HTML outline */
+} 
+
+.lPadding, .rPadding { 
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.lMargin, .rMargin {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+body, input {
+	font-family: "Prata", serif;
+}
+
+header.branding {
+	background-color: #6ea24a;
+}
+
+.branding h1 {
+	font-size: 30px;
+	color: #fff;
+	padding-top: 20px;
+	padding-bottom: 15px;
+	text-align: center;
+}
+
+input[name="shopping_item"], input[name="shopping_item"]:focus { 
+	margin-top: 50px;
+	width: 83%;
+	height: 91px;
+	border-radius: 5px;
+	box-shadow:none;
+	border: 1px solid #b7b7b7;
+	font-size: 24px;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
+}
+
+input[name="shopping_item"]:focus { 
+	outline: none;
+}
+
+ul.instructions {
+	list-style-type:none;
+	margin-top: 2px;
+	margin-bottom: 50px;
+	padding: 0;
+	text-align: center;
+}
+
+.instructions li {
+	color:#b7b7b7;
+	font-size: 12px;
+	font-family: Verdana, sans-serif;
+	display: inline-block;
+	padding-right: 1%;
+}
+
+ul.shopping_item_list {
+	list-style-type: none;
+	padding:0;
+}
+
+.shopping_item_list li {
+	background-color: #6ea24a;
+	width: 20%; /* 200px */
+	padding-left:2.5%; /* 25px */
+	padding-right:2.5%; /* 25px */
+	padding-top: 67px;
+	padding-bottom: 25px;
+	margin-bottom: 50px;
+	min-height: 143px;
+	display: inline-block;
+	vertical-align: top;
+	color: #fff;
+	font-size: 30px;
+	text-align: center;
+	position: relative; /* To position Delete span */
+}
+
+
+.shopping_item_list li:nth-child(odd) {
+	background-color: #ec5084;
+}
+
+.shopping_item_list .delete {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right:0;
+	background-color: #000;
+	padding-top:10px;
+	padding-bottom: 10px;
+	font-family: Verdana, sans-serif;
+	font-size:18px;
+	text-align: center;
+}
