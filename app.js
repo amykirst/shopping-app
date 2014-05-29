@@ -1,31 +1,35 @@
-// On start up:
-	// 1. Find spans with a class of "delete" 
-	// 2. Hide spans with a class of "delete" - use visibility:hidden
+$(document).ready(function() {
+	
+	// hide delete button
+	$(".delete").hide();
 
-// Adding a new item to list:
-	// 1. Listen for click on form
-	// 2. Hide input text
-	// 3. Listen for change to text input - use change function; will fire when text has changed
-	// 4. Create new li in shopping_item_list
-	// 5. Append li to list
+	// delete square
+	$(".tile").hover(function() {
+		$(this).find(".delete").toggle();
+	});
 
-// Editing squares:
-	// 1. Listen for double-click on a list item
-	// 2. Turn the list item into an input box
-	// 3. Turn it back to text when input box loses focus
-	// May use Jeditable plugin: http://www.appelsiini.net/projects/jeditable
+	$(".tile").on("click", ".delete", function() {
+		$(this).closest(".tile").remove(); // How do I get the other tiles to slide over?
+	});
 
-// Rearranging squares:
-	// 1. Listen for click on square
-	// 2. When user drags, follow mouse
-	// May use sortable plugin: http://jqueryui.com/sortable/
+	// cross off list 
+	$(".tile").click(function() {
+		$(this).toggleClass("deleteAction");
+	});
 
-// Crossing off list:
-	// 1. Listen for click on text
-	// 2. Change color of square to grey
+	// add new list item
+	$("input[name='shopping_item']").change(function() { 
+		var item = $(this).val();	
+		$(item).addClass("title");
+		$("<li>"+ item +"</li>").prependTo(".shopping_item_list") //How do I get the list item to add?
+	});
 
-// Deleting squares:
-	// 1. Listen for hover over square
-	// 2. Show delete span
-	// 3. Listen for click on delete
-	// 4. Remove list item 
+}); // end of ready function
+
+// How do we add pink color to every other square?
+
+// function setupTileDisplay() {
+//	$(".tile").removeClass("floatLeft floatRight");
+//	$(".tile").remove(".clear");
+// }
+

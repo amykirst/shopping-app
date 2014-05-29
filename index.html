@@ -6,6 +6,7 @@
 <link href='http://fonts.googleapis.com/css?family=Prata' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="styles.css" type="text/css" />
 <script src="modernizr.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="app.js"></script>
 </head>
 <body>
@@ -13,31 +14,29 @@
 		<h1>My Shopping List</h1>
 	</header>
 	<div class="wrapper">
-		
 		<form>
-			<input type="text" placeholder="I need to buy..." name="shopping_item" class="shopping_item">
+			<input type="text" placeholder="I need to buy..." name="shopping_item">
 		</form>
 		<ul class="instructions">
-			<li>Double-click square to edit</li>
-			<li>|</li>
-			<li>Click and drag square to rearrange</li>
-			<li>|</li>
-			<li>Click on text to cross off</li>
-			<li>|</li>
+			<li>Click on tile to mark complete</li>
+			<li class="divider">|</li>
 			<li>Hover and click “Delete” to delete</li>
 		</ul>  
 		<section>
 			<h1 class="outline">Shopping List Items</h1>
 			<ul class="shopping_item_list">
-				<li>Flowers<span class="delete">Delete</span></li>
-				<li>A gift card for mom's birthday<span class="delete">Delete</span></li>
-				<li>A birthday card<span class="delete">Delete</span></li>
-				<li>Yogurt<span class="delete">Delete</span></li>
-				<li>Applesauce<span class="delete">Delete</span></li>
-				<li>Iced tea<span class="delete">Delete</span></li>
-				<li>Ice cream<span class="delete">Delete</span></li>
-				<li>Laundry detergent<span class="delete">Delete</span></li>
-				<li>Sandwich bags<span class="delete">Delete</span></li>
+				<li class="tile floatLeft">Flowers<span class="delete">Delete</span></li>
+				<li class="tile floatRight">A gift card for mom's birthday<span class="delete">Delete</span></li>
+				<li class="tile">A birthday card<span class="delete">Delete</span></li>
+				<div class="clear"></div>
+				<li class="tile floatLeft">Yogurt<span class="delete">Delete</span></li>
+				<li class="tile floatRight">Applesauce<span class="delete">Delete</span></li>
+				<li class="tile">Iced tea<span class="delete">Delete</span></li>
+				<div class="clear"></div>
+				<li class="tile floatLeft">Ice cream<span class="delete">Delete</span></li>
+				<li class="tile floatRight">Laundry detergent<span class="delete">Delete</span></li>
+				<li class="tile">Sandwich bags<span class="delete">Delete</span></li>
+				<div class="clear"></div>
 			</ul>
 		</section>
 	</div><!--end wrapper-->
