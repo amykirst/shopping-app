@@ -126,34 +126,37 @@ ul.instructions {
 ul.shopping_item_list {
 	list-style-type: none;
 	padding:0; 
+	width:100%;
 }
 
 .tile {
+	float:left;
+	width:30%;
+	box-sizing:border-box;
+	margin-bottom:50px;
+	vertical-align:top;
+	min-height: 250px;
 	background-color: #6ea24a;
-	width: 25%;
-	height: 150px;
-	padding:80px 10px 10px 10px;
-	margin-bottom: 50px; /* Why doesn't margin-top work? */
-	margin-left:auto;
-	margin-right:auto;
+	padding:50px 25px 25px 25px;
 	color: #fff;
 	font-size: 25px;
 	text-align: center;
 	position: relative; /* To position delete span */
 }
 
-/* How do I set the background color for every other square to pink? */
-
-.clear {
-	clear:both;
+.tile.middle {
+	margin-left:5%;
+	margin-right:5%;
 }
 
-.floatLeft {
-	float:left;
+.shopping_item_list:after {/*add an extra line so last line of element is justified too*/
+  content:'';
+  width:100%;
+  display:inline-block;
 }
 
-.floatRight {
-	float:right;
+.shopping_item_list li:nth-child(even) {
+	background-color:#ec5084;
 }
 
 .shopping_item_list .delete {
@@ -171,7 +174,7 @@ ul.shopping_item_list {
 }
 
 .deleteAction {
-	background-color:#b7b7b7;
+	background-color:#b7b7b7 !important; /*Needed to override pink background color. How else could I have done this? */
 	text-decoration:line-through;
 	color:#e1e1e1;
 }
@@ -181,33 +184,7 @@ ul.shopping_item_list {
 
 @media only screen and (max-width: 930px) {
 
-	.tile {
-	width:70%;
-	}
 
-	.floatLeft {
-	float:none;
-	}
-
-	.floatRight {
-	float:none;
-	}
-
-	::-webkit-input-placeholder {
-   text-align: center;
-	}
-
-	:-moz-placeholder { /* Firefox 18- */
-   text-align: center; 
-	}
-
-	::-moz-placeholder {  /* Firefox 19+ */
-   text-align: center; 
-	}
-
-	:-ms-input-placeholder {  
-   text-align: center;
-	}
 
 	ul.instructions {
 	text-align: left;
@@ -230,12 +207,19 @@ ul.shopping_item_list {
 
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
 
 	.wrapper {
-	margin-left: 20px;
-	margin-right: 20px;
+		margin-left: 10px;
+		margin-right:10px;
 	}
+
+	.tile {
+		width:100%;
+		padding-left:0px;
+		padding-right:0px;
+	}
+
 
 	.branding h1 {
 	font-size: 25px;
@@ -244,12 +228,20 @@ ul.shopping_item_list {
 	line-height:1.5em;
 	}
 
-	.lPadding { 
-	padding-left: 20px;
+		::-webkit-input-placeholder {
+   text-align: center;
 	}
 
-	.rPadding {
-		padding-right: 20px;
+	:-moz-placeholder { /* Firefox 18- */
+   text-align: center; 
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center; 
+	}
+
+	:-ms-input-placeholder {  
+   text-align: center;
 	}
 
 }

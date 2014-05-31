@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	
+
 	// hide delete button
 	$(".delete").hide();
 
@@ -9,7 +9,9 @@ $(document).ready(function() {
 	});
 
 	$(".tile").on("click", ".delete", function() {
-		$(this).closest(".tile").remove(); // How do I get the other tiles to slide over?
+		$(this).closest("li.tile").remove(); 
+		$(".tile").removeClass("middle");	
+		$(".shopping_item_list li:nth-child(3n+2)").addClass("middle");
 	});
 
 	// cross off list 
@@ -17,19 +19,9 @@ $(document).ready(function() {
 		$(this).toggleClass("deleteAction");
 	});
 
-	// add new list item
-	$("input[name='shopping_item']").change(function() { 
-		var item = $(this).val();	
-		$(item).addClass("title");
-		$("<li>"+ item +"</li>").prependTo(".shopping_item_list") //How do I get the list item to add?
-	});
+	//add list item
+
+
 
 }); // end of ready function
-
-// How do we add pink color to every other square?
-
-// function setupTileDisplay() {
-//	$(".tile").removeClass("floatLeft floatRight");
-//	$(".tile").remove(".clear");
-// }
 
