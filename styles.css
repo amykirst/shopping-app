@@ -132,6 +132,8 @@ ul.shopping_item_list {
 .tile {
 	float:left;
 	width:30%;
+	-moz-box-sizing: border-box;   
+   -webkit-box-sizing: border-box;
 	box-sizing:border-box;
 	margin-bottom:50px;
 	vertical-align:top;
@@ -145,8 +147,8 @@ ul.shopping_item_list {
 }
 
 .tile.middle {
-	margin-left:5%;
-	margin-right:5%;
+	margin-left:4.9%;
+	margin-right:4.9%;
 }
 
 .shopping_item_list:after {/*add an extra line so last line of element is justified too*/
