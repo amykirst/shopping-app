@@ -9,16 +9,7 @@ $(document).ready(function() {
 	}); 
 
 
-	// hide delete button
-	$(".delete").hide();
-
-
-	// delete square
-	$(".tile").hover(function() {
-		$(this).find(".delete").toggle();
-	});
-
-	$(".tile").on("click", ".delete", function() {
+	$(document).on("click", ".delete", function() {
 		$(this).closest("li.tile").remove(); 
 		$(".tile").removeClass("middle");	
 		$(".shopping_item_list li:nth-child(3n+2)").addClass("middle");
@@ -26,10 +17,9 @@ $(document).ready(function() {
 
 
 	// cross off list 
-	$(".tile").click(function() {
+	$(document).on("click", ".tile", function() {
 		$(this).toggleClass("deleteAction");
 	});
-
 
 
 }); // end of ready function

@@ -169,6 +169,14 @@ ul.shopping_item_list {
 	text-align: center;
 }
 
+.tile .delete {
+    display: none;
+}
+
+.tile:hover .delete {
+    display: block;
+}
+
 .deleteAction {
 	background-color:#b7b7b7 !important; /*Needed to override pink background color. How else could I have done this? */
 	text-decoration:line-through;
