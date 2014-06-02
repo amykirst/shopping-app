@@ -2,11 +2,10 @@ $(document).ready(function() {
 
 	//add list item
 	$("input[name='shopping_item']").change(function(event) {
-		event.preventDefault();
-
+		event.preventDefault(); // Prevents browser from keeping list of suggestions and displaying them on input
     	var item = $(this).val();   
     	$("<li class='tile'>" + item + "<span class='delete'>Delete</span>" + "</li>").prependTo(".shopping_item_list");
-    	$("input[name='shopping_item']").val("");
+    	$("input[name='shopping_item']").val(""); // Resets input field
     	$(".tile").removeClass("middle");   
     	$(".shopping_item_list li:nth-child(3n+2)").addClass("middle");
     	return false;
