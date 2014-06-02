@@ -147,14 +147,8 @@ ul.shopping_item_list {
 }
 
 .tile.middle {
-	margin-left:4.9%;
-	margin-right:4.9%;
-}
-
-.shopping_item_list:after {/*add an extra line so last line of element is justified too*/
-  content:'';
-  width:100%;
-  display:inline-block;
+	margin-left:4.99%;
+	margin-right:4.99%;
 }
 
 .shopping_item_list li:nth-child(even) {
