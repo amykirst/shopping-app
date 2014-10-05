@@ -1,7 +1,3 @@
-// Troubleshooting delete and cross off:
-
-
-
 $(document).ready(function() {
   
   // Add list item
